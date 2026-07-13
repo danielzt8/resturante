@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Club Náutico Las Calderas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header class="relative h-[60vh] min-h-[400px] flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 text-center text-white px-4">
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4 drop-shadow-lg">Club Náutico Las Calderas</h1>
+            <p class="text-xl font-light uppercase tracking-[0.3em] opacity-90">Desde 2018</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-16 px-4 md:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-serif text-blue-900 mb-3">Nuestra Oferta</h2>
+            <div class="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="space-y-8">
+            <div id="drinksPage" class="space-y-8 hidden">
+                <div class="flex justify-center mb-8">
+                    <button id="showFoodsBtn" type="button" class="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-slate-800 transition">Volver a los alimentos</button>
+                </div>
+
+                <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-200">
+                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Sección</p>
+                        <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Carta de Bebidas</h3>
+                        <p class="mt-2 text-sm text-slate-500">Jugos naturales, digestivos, tragos y vodka para todos los gustos.</p>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Cervezas</p>
+                            <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Variedad de cervezas</h3>
+                            <p class="mt-2 text-sm text-slate-500">Botellas y tamaños — precios en RD$.</p>
+                        </div>
+                        <button id="toggleCervezas" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700 transition">
+                            <span class="cervezas-text">Ocultar cervezas</span>
+                        </button>
+                    </div>
+                    <div id="cervezasSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 p-6">
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3">
+                                    <span class="font-semibold text-slate-900">PRESIDENTE GRANDE</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 250.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">PRESIDENTE PEQUEÑA</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 190.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">ONE GRANDE</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 190.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">ONE PEQUEÑA</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 160.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">CORONA</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 250.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BRAHMA GRANDE</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 210.00</span>
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 p-6">
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3">
+                                    <span class="font-semibold text-slate-900">BUDWEISER</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 240.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">STELLA</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 240.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">HEINEKEN</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 200.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">SMIRNOFF ICE</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 200.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">MODELO</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 190.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">MILLER</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 190.00</span>
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 p-6">
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3">
+                                    <span class="font-semibold text-slate-900">ERDINGER</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 210.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BERKS BLUK SIN ALCOHOL</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 190.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pt-3">
+                                    <span class="font-semibold text-slate-900">COORS LIGHT BOTELLA</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 205.00</span>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Aperitivos</p>
+                            <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Aperitivos y vermuts</h3>
+                            <p class="mt-2 text-sm text-slate-500">Clásicos aperitivos para abrir el apetito.</p>
+                        </div>
+                        <button id="toggleAperitivos" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700 transition">
+                            <span class="aperitivos-text">Ocultar aperitivos</span>
+                        </button>
+                    </div>
+                    <div id="aperitivosSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 p-6">
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3">
+                                    <span class="font-semibold text-slate-900">MARTINI</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 315.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pt-3">
+                                    <span class="font-semibold text-slate-900">SINZANO</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 315.00</span>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Jugos Naturales</p>
+                            <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Limon, chinola, cereza y piña</h3>
+                        </div>
+                        <button id="toggleJugos" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700 transition">
+                            <span class="jugos-text">Ocultar jugos</span>
+                        </button>
+                    </div>
+                    <div id="jugosSection" class="p-6">
+                        <div class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 p-6">
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3">
+                                    <span class="font-semibold text-slate-900">Limón</span>
+                                    <span class="text-blue-700 font-semibold">RD$100.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">Chinola</span>
+                                    <span class="text-blue-700 font-semibold">RD$100.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">Cereza</span>
+                                    <span class="text-blue-700 font-semibold">RD$100.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pt-3">
+                                    <span class="font-semibold text-slate-900">Piña</span>
+                                    <span class="text-blue-700 font-semibold">RD$100.00</span>
+                                </li>
+                            </ul>
+                            <p class="mt-4 text-sm text-slate-500">Jugos naturales preparados al momento.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Digestivos</p>
+                            <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Para una buena sobremesa</h3>
+                        </div>
+                        <button id="toggleDigestivos" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700 transition">
+                            <span class="digestivos-text">Ocultar digestivos</span>
+                        </button>
+                    </div>
+                    <div id="digestivosSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Romana+Sambvca" alt="Romana Sambvca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Digestivo</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Romana Sambvca</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$315</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Aperitivo clásico para cerrar la comida con calma.</p>
+                            </div>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Frangelico" alt="Frangelico" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Digestivo</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Frangelico</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$315</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Licor avellanado con toque italiano para la sobremesa.</p>
+                            </div>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Cointreau" alt="Cointreau" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Digestivo</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Cointreau</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$315</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Sabor cítrico premium, elegante y ligeramente dulce.</p>
+                            </div>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Amaro+Averna" alt="Amaro Averna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Digestivo</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Amaro Averna</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$315</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Herbal y suave, ideal para un final relajado.</p>
+                            </div>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Fernet+Branca" alt="Fernet Branca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Digestivo</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Fernet Branca</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$315</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Intenso y aromático, para quienes buscan un toque fuerte.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Tragos</p>
+                            <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Cócteles clásicos y elegantes</h3>
+                        </div>
+                        <button id="toggleTragos" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700 transition">
+                            <span class="tragos-text">Ocultar tragos</span>
+                        </button>
+                    </div>
+                    <div id="tragosSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Chivas+Regal" alt="Chivas Regal 12 años" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Trago</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Chivas Regal 12 años</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$265</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Whisky suave y redondeado con cuerpo elegante.</p>
+                            </div>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Johnnie+Walker" alt="Johnnie Walker 12 años" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Trago</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Johnnie Walker 12 años</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$400</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Clásico escocés con notas ahumadas y dulces.</p>
+                            </div>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Dewar's" alt="Dewar's 12 años" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Trago</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Dewar's 12 años</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$265</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Aromático y cremoso, perfecto para saborear lento.</p>
+                            </div>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Grey+Goose" alt="Grey Goose" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Trago</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Grey Goose</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$265</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Vodka elegante y suave, ideal también en cocktail.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Vodka</p>
+                            <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Selección premium</h3>
+                        </div>
+                        <button id="toggleVodka" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700 transition">
+                            <span class="vodka-text">Ocultar vodka</span>
+                        </button>
+                    </div>
+                    <div id="vodkaSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Belvedere+Vodka" alt="Belvedere Vodka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Vodka</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Belvedere Vodka</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$2,520</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Cuerpo suave y sabor refinado para paladares exigentes.</p>
+                            </div>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Stolichnaya" alt="Stolichnaya" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Vodka</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Stolichnaya</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$1,560</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Vodka clásico con carácter tradicional y limpio.</p>
+                            </div>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Stoli+Gold" alt="Stoli Gold" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Vodka</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Stoli Gold</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$2,395</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Elegante vodka premium con un toque suave y dorado.</p>
+                            </div>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                            <div class="h-56 bg-slate-200 overflow-hidden relative">
+                                <img src="https://via.placeholder.com/600x400?text=Eristoff" alt="Eristoff" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-blue-900">Vodka</span>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start gap-4 mb-2">
+                                    <h4 class="text-xl font-bold text-slate-800 leading-tight">Eristoff</h4>
+                                    <span class="text-lg font-black text-blue-700">RD$1,050</span>
+                                </div>
+                                <p class="text-sm text-slate-500">Perfecto para un trago sencillo, puro o con mixer.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Whisky y Vodka</p>
+                            <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Selección de whiskies y vodkas premium</h3>
+                            <p class="mt-2 text-sm text-slate-500">Botellas y etiquetas seleccionadas con precios en RD$.</p>
+                        </div>
+                        <button id="toggleWhiskyVodka" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700 transition">
+                            <span class="whiskyvodka-text">Ocultar whisky y vodka</span>
+                        </button>
+                    </div>
+                    <div id="whiskyVodkaSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 p-6">
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3">
+                                    <span class="font-semibold text-slate-900">BUCHANAN`S 18 AÑOS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 7,690.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BUCHANAN`S 12 AÑOS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 3,255.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">GLENLIVET FORT</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 3,255.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">GLENLIVET 12 AÑOS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 4,750.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">GLENLIVET 15 AÑOS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 6,130.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">CHIVAS REGAL 18 AÑOS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 5,860.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">CHIVAS REGAL 12 AÑOS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 3,155.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">JOHNNIE WALKER GOLD</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 5,355.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pt-3">
+                                    <span class="font-semibold text-slate-900">JOHNNIE WALKER DOUBLE BLACK</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 4,100.00</span>
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 p-6">
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3">
+                                    <span class="font-semibold text-slate-900">JOHNNIE WALKER 12 AÑOS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 3,575.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">OLD PARR 12 AÑOS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 3,000.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BLACK AND WHITE</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 1,200.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">DEWAR'S 12 AÑOS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 2,890.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">DEWAR'S 8 AÑOS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 1,200.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">SOMETHING SPECIAL</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 1,200.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">100 PIPERS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 1,120.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pt-3">
+                                    <span class="font-semibold text-slate-900">PASSPORT SCOTCH</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 960.00</span>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Ron</p>
+                            <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Selección de rones</h3>
+                            <p class="mt-2 text-sm text-slate-500">Rones nacionales e importados con precios en RD$.</p>
+                        </div>
+                        <button id="toggleRon" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700 transition">
+                            <span class="ron-text">Ocultar ron</span>
+                        </button>
+                    </div>
+                    <div id="ronSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 p-6">
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3">
+                                    <span class="font-semibold text-slate-900">BRUGAL 1888</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 3,085.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BOTRAN 15 AÑOS RESERVA</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 2,680.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BOTRAN 12 AÑOS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 1,870.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BERMÚDEZ DON ARMANDO</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 1,850.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BRUGAL DOBLE RESERVAS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 1,280.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BRUGAL TRPLI RESERVAS</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 1,415.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pt-3">
+                                    <span class="font-semibold text-slate-900">BRUGAL LEYENDA</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 1,680.00</span>
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 p-6">
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3">
+                                    <span class="font-semibold text-slate-900">BRUGAL EXTRA VIEJO LITRO</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 920.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BRUGAL EXTRA PEQUEÑO</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 420.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BRUGAL XV LITRO</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 890.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BRUGAL XV PEQUEÑO</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 475.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BRUGAL BLANCO LITRO</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 680.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">BRUGAL BLANCO PEQUEÑO</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 370.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pt-3">
+                                    <span class="font-semibold text-slate-900">BARCELÓ IMPERIAL</span>
+                                    <span class="text-blue-700 font-semibold">RD$ 1,495.00</span>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div>
+                            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Otro</p>
+                            <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Otras bebidas y refrescos</h3>
+                            <p class="mt-2 text-sm text-slate-500">Refrescos, aguas, jugos, energizantes y bebidas sin alcohol con precios en RD$.</p>
+                        </div>
+                        <button id="toggleOtro" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700 transition">
+                            <span class="otro-text">Ocultar otro</span>
+                        </button>
+                    </div>
+                    <div id="otroSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 p-6">
+                            <h4 class="text-xl font-semibold text-slate-900 mb-4">Bebidas frías</h4>
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3">
+                                    <span class="font-semibold text-slate-900">Agua mineral</span>
+                                    <span class="text-blue-700 font-semibold">RD$120.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">Gaseosa</span>
+                                    <span class="text-blue-700 font-semibold">RD$150.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">Jugo natural</span>
+                                    <span class="text-blue-700 font-semibold">RD$190.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">Energizante</span>
+                                    <span class="text-blue-700 font-semibold">RD$190.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pt-3">
+                                    <span class="font-semibold text-slate-900">Té frío</span>
+                                    <span class="text-blue-700 font-semibold">RD$170.00</span>
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 p-6">
+                            <h4 class="text-xl font-semibold text-slate-900 mb-4">Refrescos y cafés</h4>
+                            <ul class="space-y-3 text-sm text-slate-700">
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3">
+                                    <span class="font-semibold text-slate-900">Café espresso</span>
+                                    <span class="text-blue-700 font-semibold">RD$130.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">Café americano</span>
+                                    <span class="text-blue-700 font-semibold">RD$150.00</span>
+                                </li>
+                                <li class="flex justify-between items-center border-b border-slate-200 pb-3 pt-3">
+                                    <span class="font-semibold text-slate-900">Agua de coco</span>
+                                    <span class="text-blue-700 font-semibold">RD$180.00</span>
+                                </li>
+                                <li class="flex justify-between items-center pt-3">
+                                    <span class="font-semibold text-slate-900">Refresco de frutas</span>
+                                    <span class="text-blue-700 font-semibold">RD$170.00</span>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <div id="foodsPage" class="space-y-8">
+                <div class="flex justify-center mb-8">
+                    <button id="showDrinksBtn" type="button" class="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-blue-700 transition">Ver bebidas</button>
+                </div>
+
+            <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Sección</p>
+                        <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Brunch</h3>
+                    </div>
+                    <button id="toggleBrunch" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-slate-800 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-900 transition">
+                        <span class="brunch-text">Ocultar brunch</span>
+                    </button>
+                </div>
+                <div id="brunchSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Brunch+Continental" alt="Brunch Continental" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Brunch</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Continental</h4>
+                                <span class="text-lg font-black text-blue-700">RD$415</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Mangú o puré de papas, huevos fritos o revueltos, jamón o salami y queso frito.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Brunch+Americano" alt="Brunch Americano" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Brunch</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Americano</h4>
+                                <span class="text-lg font-black text-blue-700">RD$415</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Tostadas o panqueques, huevos fritos o revueltos, tocino o jamón y syrup o mermelada de piña, guayaba o fresa.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Sección</p>
+                        <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Entradas</h3>
+                    </div>
+                    <button id="toggleEntradas" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-slate-800 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-900 transition">
+                        <span class="entradas-text">Ocultar entradas</span>
+                    </button>
+                </div>
+                <div id="entradasSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Bastoncitos+de+mero" alt="Bastoncitos de mero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Entrada</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Bastoncitos de mero</h4>
+                                <span class="text-lg font-black text-blue-700">RD$315</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Crujientes bastones de mero, perfectos para compartir.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Croquetas" alt="Croquetas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Entrada</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Croquetas</h4>
+                                <span class="text-lg font-black text-blue-700">RD$310</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Deliciosas croquetas de la casa, doradas a la perfección.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Catibías" alt="Catibías" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Entrada</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Catibías</h4>
+                                <span class="text-lg font-black text-blue-700">RD$265</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Sabor regional con relleno jugoso y suave.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Canoítas" alt="Canoítas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Entrada</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Canoítas</h4>
+                                <span class="text-lg font-black text-blue-700">RD$420</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Pollo, ceviche y salsa queso en masa crujiente.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Canoítas+de+camarones" alt="Canoítas de camarones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Entrada</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Canoítas de camarones</h4>
+                                <span class="text-lg font-black text-blue-700">RD$630</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Delicados camarones envueltos en masa crujiente.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Canoítas+de+lambí" alt="Canoítas de lambí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Entrada</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Canoítas de lambí</h4>
+                                <span class="text-lg font-black text-blue-700">RD$420</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Sabor marino con carne de caracol premium.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Ceviche+de+pescado" alt="Ceviche de pescado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Entrada</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Ceviche de pescado</h4>
+                                <span class="text-lg font-black text-blue-700">RD$370</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Fresco ceviche de pescado con limón y cilantro.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Cóctel+de+camarones" alt="Cóctel de camarones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Entrada</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Cóctel de camarones</h4>
+                                <span class="text-lg font-black text-blue-700">RD$630</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Cóctel frío de camarones con salsa al estilo caribeño.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Sección</p>
+                        <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Ensaladas</h3>
+                    </div>
+                    <button id="toggleEnsaladas" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-slate-800 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-900 transition">
+                        <span class="ensaladas-text">Ocultar ensaladas</span>
+                    </button>
+                </div>
+                <div id="ensaladasSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Ensalada+César" alt="Ensalada César" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Ensalada</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Ensalada César</h4>
+                                <span class="text-lg font-black text-blue-700">RD$580</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Clásica ensalada con lechuga, pollo, croutons y aderezo César.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Ensalada+Caprese" alt="Ensalada Caprese" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Ensalada</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Ensalada Caprese</h4>
+                                <span class="text-lg font-black text-blue-700">RD$475</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Tomate, mozzarella y albahaca con un toque de aceite de oliva.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Sección</p>
+                        <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Pastas</h3>
+                    </div>
+                    <button id="togglePastas" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-slate-800 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-900 transition">
+                        <span class="pastas-text">Ocultar pastas</span>
+                    </button>
+                </div>
+                <div id="pastasSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Pastas+Marinera" alt="Pastas Marinera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pasta</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Pastas Marinera</h4>
+                                <span class="text-lg font-black text-blue-700">RD$840</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Pastas con mariscos y salsa fresca al estilo de la casa.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Pasta+Carbonara" alt="Pasta Carbonara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pasta</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Pasta Carbonara</h4>
+                                <span class="text-lg font-black text-blue-700">RD$475</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Clásica carbonara cremosa con panceta y queso.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Sopa+de+pollo" alt="Sopa de pollo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Sopa</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Sopa de pollo</h4>
+                                <span class="text-lg font-black text-blue-700">RD$420</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Sopa caliente con pollo y verduras frescas.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Sopa+de+pescado" alt="Sopa de pescado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Sopa</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Sopa de pescado</h4>
+                                <span class="text-lg font-black text-blue-700">RD$475</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Sopa marina con pescado fresco y hierbas aromáticas.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Penne+con+camarones" alt="Penne con camarones en salsa de tres quesos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pasta</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Penne con camarones en salsa de tres quesos</h4>
+                                <span class="text-lg font-black text-blue-700">RD$735</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Penne cremoso con camarones frescos y salsa de tres quesos.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Sección</p>
+                        <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Pescados y Mariscos</h3>
+                    </div>
+                    <button id="togglePescados" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-slate-800 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-900 transition">
+                        <span class="pescados-text">Ocultar pescados</span>
+                    </button>
+                </div>
+                <div id="pescadosSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Langosta+al+Brandy" alt="Langosta al Brandy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pescado</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Langosta al Brandy</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,785</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Langosta preparada con salsa de brandy y especias.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Langosta+al+Thermidor" alt="Langosta al Thermidor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pescado</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Langosta al Thermidor</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,995</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Clásica langosta gratinada con salsa cremosa al Thermidor.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Langosta+libra" alt="Langosta Libra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pescado</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Langosta Libra</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,730</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Langosta al ajillo, plancha, vinagreta o criolla al gusto.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Paella+Marinera" alt="Paella Marinera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mariscos</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Paella Marinera</h4>
+                                <span class="text-lg font-black text-blue-700">RD$2,310</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Paella para dos con mariscos frescos y arroz sazonado.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Paella+de+carnes" alt="Paella de Carnes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mariscos</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Paella de Carnes</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,890</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Paella de carnes con sabor intenso y porción generosa.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Cazuela+de+mariscos" alt="Cazuela de Mariscos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mariscos</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Cazuela de Mariscos</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,050</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Cazuela caliente con mezcla de mariscos y delicadas especias.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Salpicón+de+mariscos" alt="Salpicón de Mariscos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mariscos</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Salpicón de Mariscos</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,000</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Salpicón frío con camarones, calamares y salsa cítrica.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Filete+de+salmón" alt="Filete de salmón" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pescado</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Filete de salmón</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,260</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Filete de salmón a la plancha, criolla o crocante.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Olas+de+mar+y+tierra" alt="Olas de Mar y Tierra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pescado</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Olas de Mar y Tierra</h4>
+                                <span class="text-lg font-black text-blue-700">RD$920</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Filete de res con mariscos, perfecto para los que quieren variedad.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Mero+Cartocio" alt="Mero Cartocio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pescado</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Mero Cartocio</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,155</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Mero con camarones, mejillones, lambí y champiñones.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Chillo+por+libra" alt="Chillo precio por libra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pescado</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Chillo precio por libra</h4>
+                                <span class="text-lg font-black text-blue-700">RD$790</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Chillo frita, a la plancha, criolla, vapor o ajillo.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Filete+de+mero+relleno" alt="Filete de mero relleno" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pescado</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Filete de mero</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,000</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Filete de mero relleno de camarones en salsa de langostinos.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Filete+de+mero" alt="Filete de mero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pescado</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Filete de mero</h4>
+                                <span class="text-lg font-black text-blue-700">RD$630</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Filete de mero a la plancha, criolla, vapor o ajillo.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Camarones" alt="Camarones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mariscos</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Camarones</h4>
+                                <span class="text-lg font-black text-blue-700">RD$790</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Camarones a la criolla, ajillo, crema, vinagreta o enchilado.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Lambí" alt="Lambí" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mariscos</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Lambí</h4>
+                                <span class="text-lg font-black text-blue-700">RD$630</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Lambí molido a la criolla con ajo, crema y vinagreta.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Pescado+Carite" alt="Pescado Carite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pescado</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Pescado Carite</h4>
+                                <span class="text-lg font-black text-blue-700">RD$600</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Pescado frito, a la plancha, vapor, criolla, ajillo o coco.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Pescado+Dorado" alt="Pescado Dorado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pescado</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Pescado Dorado</h4>
+                                <span class="text-lg font-black text-blue-700">RD$600</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Pescado dorado frito, a la plancha, vapor, criolla, ajillo o coco.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Masa+de+cangrejo" alt="Masa de cangrejo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mariscos</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Masa de Cangrejo</h4>
+                                <span class="text-lg font-black text-blue-700">RD$700</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Masa de cangrejo molido con criolla, ajillo, crema y vinagreta.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Sección</p>
+                        <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Carnes</h3>
+                    </div>
+                    <button id="toggleCarnes" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-slate-800 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-900 transition">
+                        <span class="carnes-text">Ocultar carnes</span>
+                    </button>
+                </div>
+                <div id="carnesSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Bistec+de+Res" alt="Bistec de Res" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Carne</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Bistec de Res</h4>
+                                <span class="text-lg font-black text-blue-700">RD$580</span>
+                            </div>
+                            <p class="text-sm text-slate-500">A la plancha, salteada con vegetales.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Churrasco+Angus" alt="Churrasco Angus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Carne</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Churrasco Angus</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,470</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Jugoso churrasco Angus a la plancha.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Chivos+Picantes" alt="Chivos Picantes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Carne</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Chivos Picantes</h4>
+                                <span class="text-lg font-black text-blue-700">RD$685</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Chivo sazonado con especias picantes.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Filete+de+Cerdo" alt="Filete de Cerdo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Cerdo</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Filete de Cerdo</h4>
+                                <span class="text-lg font-black text-blue-700">RD$525</span>
+                            </div>
+                            <p class="text-sm text-slate-500">A la plancha, crema, criolla, con hongos y pimienta negra o agridulce.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Filete+de+Cerdo+a+la+Mar" alt="Filete de Cerdo a la Mar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Cerdo</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Filete de Cerdo a la Mar</h4>
+                                <span class="text-lg font-black text-blue-700">RD$685</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Filete de cerdo con mariscos y salsa de la casa.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Filete+Arco%C3%ADris" alt="Filete Arcoiris" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Carne</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Filete Arcoíris</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,155</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Carne al estilo arcoíris con opción de cerdo o res.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Chuleta+Ahumada" alt="Chuleta Ahumada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Carne</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Chuleta Ahumada</h4>
+                                <span class="text-lg font-black text-blue-700">RD$400</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Frita, criolla, agridulce o a la plancha.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Longaniza+Frita" alt="Longaniza Frita" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Carne</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Longaniza Frita</h4>
+                                <span class="text-lg font-black text-blue-700">RD$385</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Longaniza frita servida con guarnición tradicional.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Picadera+Mixta" alt="Picadera Mixta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Carne</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Picadera Mixta</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,950</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Pollo, chuleta, longaniza, alistas, bastoncitos, calamar con papas fritas o tostones.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Picadera+Caliente" alt="Picadera Caliente" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Carne</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Picadera Caliente</h4>
+                                <span class="text-lg font-black text-blue-700">RD$1,520</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Pollo, chuleta, longaniza, alistas acompañados de papas fritas o tostones.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Mofongo+Tradicional" alt="Mofongo Tradicional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mofongo</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Mofongo Tradicional</h4>
+                                <span class="text-lg font-black text-blue-700">RD$585</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Mofongo clásico con ajo y chicharrón.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Mofongo+con+Camarones" alt="Mofongo con Camarones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mofongo</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Mofongo Camarones</h4>
+                                <span class="text-lg font-black text-blue-700">RD$735</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Mofongo con camarones y salsa cremosa.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Mofongo+a+la+Crema" alt="Mofongo a la Crema" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mofongo</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Mofongo a la Crema</h4>
+                                <span class="text-lg font-black text-blue-700">RD$550</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Mofongo cremoso con toque de crema y ajo.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Mofongo+con+Carnita" alt="Mofongo con Carnita" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mofongo</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Mofongo con Carnita</h4>
+                                <span class="text-lg font-black text-blue-700">RD$650</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Mofongo relleno de carne al gusto.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Mofongo+con+Chicharrones" alt="Mofongo con Chicharrones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mofongo</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Mofongo con Chicharrones</h4>
+                                <span class="text-lg font-black text-blue-700">RD$700</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Mofongo con crujientes chicharrones y salsa criolla.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Mofongo+con+Longaniza" alt="Mofongo con Longaniza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Mofongo</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Mofongo con Longaniza</h4>
+                                <span class="text-lg font-black text-blue-700">RD$550</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Mofongo con longaniza dorada y salsa especial.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Alitas+Picantes" alt="Alitas Picantes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Carne</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Alitas Picantes</h4>
+                                <span class="text-lg font-black text-blue-700">RD$530</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Alitas crocantes con salsa picante de la casa.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Bacon+Cheese+Burger" alt="Bacon Cheese Burger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Burger</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Bacon Cheese Burger</h4>
+                                <span class="text-lg font-black text-blue-700">RD$475</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Carnes angus, bacon, tomate, lechuga, queso y papas o tostones.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Sección</p>
+                        <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Aves</h3>
+                    </div>
+                    <button id="toggleAves" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-slate-800 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-900 transition">
+                        <span class="aves-text">Ocultar aves</span>
+                    </button>
+                </div>
+                <div id="avesSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Pechuga+a+la+Plancha" alt="Pechuga a la Plancha" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Aves</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Pechuga a la Plancha</h4>
+                                <span class="text-lg font-black text-blue-700">RD$495</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Pechuga de pollo jugosa con hierbas y limón.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Alitas+Barbecue" alt="Alitas Barbecue" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Aves</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Alitas Barbecue</h4>
+                                <span class="text-lg font-black text-blue-700">RD$385</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Alitas crujientes con salsa barbecue de la casa.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Pechurina" alt="Pechurina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Aves</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Pechurina</h4>
+                                <span class="text-lg font-black text-blue-700">RD$465</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Pollo al estilo criollo con salsa de hierbas.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Chicharr%C3%B3n+de+Pollo" alt="Chicharrón de Pollo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Aves</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Chicharrón de Pollo</h4>
+                                <span class="text-lg font-black text-blue-700">RD$425</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Pollo crujiente y dorado con toque de limón.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Sección</p>
+                        <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Guarniciones</h3>
+                    </div>
+                    <button id="toggleGuarniciones" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-slate-800 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-900 transition">
+                        <span class="guarniciones-text">Ocultar guarniciones</span>
+                    </button>
+                </div>
+                <div id="guarnicionesSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Papas+Fritas" alt="Papas Fritas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Guarnición</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Papas Fritas</h4>
+                                <span class="text-lg font-black text-blue-700">RD$160</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Papas doradas y crujientes para compartir.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Tostones" alt="Tostones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Guarnición</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Tostones</h4>
+                                <span class="text-lg font-black text-blue-700">RD$105</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Tostones dorados con un toque de sal y ajo.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Arroz+Blanco" alt="Arroz Blanco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Guarnición</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Arroz Blanco</h4>
+                                <span class="text-lg font-black text-blue-700">RD$105</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Arroz esponjoso preparado al estilo casero.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Ensalada+Verde" alt="Ensalada Verde" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Guarnición</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Ensalada Verde</h4>
+                                <span class="text-lg font-black text-blue-700">RD$125</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Mix de lechugas con tomate y aderezo ligero.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Sección</p>
+                        <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Postres</h3>
+                    </div>
+                    <button id="togglePostres" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-slate-800 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-900 transition">
+                        <span class="postres-text">Ocultar postres</span>
+                    </button>
+                </div>
+                <div id="postresSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Flan+de+La+Casa" alt="Flan de la Casa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Postre</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Flan de la Casa</h4>
+                                <span class="text-lg font-black text-blue-700">RD$215</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Flan cremoso con caramelo suave.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Cheesecake" alt="Cheesecake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Postre</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Cheesecake</h4>
+                                <span class="text-lg font-black text-blue-700">RD$225</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Crema suave sobre base de galletas crocantes.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Tres+Leches" alt="Tres Leches" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Postre</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Tres Leches</h4>
+                                <span class="text-lg font-black text-blue-700">RD$215</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Pastel húmedo empapado en tres leches.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Brownie+Caliente" alt="Brownie Caliente" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Postre</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Brownie Caliente</h4>
+                                <span class="text-lg font-black text-blue-700">RD$245</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Brownie con chocolate intenso y helado.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-6 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Sección</p>
+                        <h3 class="text-2xl md:text-3xl font-serif text-slate-900">Pizzas</h3>
+                    </div>
+                    <button id="togglePizzas" type="button" aria-expanded="true" class="inline-flex items-center justify-center rounded-full bg-slate-800 px-5 py-3 text-sm font-semibold text-white shadow hover:bg-slate-900 transition">
+                        <span class="pizzas-text">Ocultar pizzas</span>
+                    </button>
+                </div>
+                <div id="pizzasSection" class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Pizza+Mediana+1+Ingrediente" alt="Pizza Mediana 1 Ingrediente" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pizza</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Pizza Mediana + 1 Ingrediente</h4>
+                                <span class="text-lg font-black text-blue-700">RD$525</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Base clásica con un ingrediente extra a elección.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Pizza+Mediana+2+Ingredientes" alt="Pizza Mediana 2 Ingredientes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pizza</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Pizza Mediana + 2 Ingredientes</h4>
+                                <span class="text-lg font-black text-blue-700">RD$575</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Mediana con dos ingredientes frescos para la familia.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Pizza+Mediana+3+Ingredientes" alt="Pizza Mediana 3 Ingredientes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pizza</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Pizza Mediana + 3 Ingredientes</h4>
+                                <span class="text-lg font-black text-blue-700">RD$620</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Sabor completo con tres ingredientes selectos.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Pizza+Grande+1+Ingrediente" alt="Pizza Grande 1 Ingrediente" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pizza</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Pizza Grande + 1 Ingrediente</h4>
+                                <span class="text-lg font-black text-blue-700">RD$680</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Grande perfecta para compartir con un ingrediente extra.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Pizza+Grande+2+Ingredientes" alt="Pizza Grande 2 Ingredientes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pizza</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Pizza Grande + 2 Ingredientes</h4>
+                                <span class="text-lg font-black text-blue-700">RD$710</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Grande con dos ingredientes sabrosos y masa crujiente.</p>
+                        </div>
+                    </article>
+                    <article class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                        <div class="h-56 bg-slate-200 overflow-hidden relative">
+                            <img src="https://via.placeholder.com/600x400?text=Pizza+Grande+3+Ingredientes" alt="Pizza Grande 3 Ingredientes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pizza</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start gap-4 mb-2">
+                                <h4 class="text-xl font-bold text-slate-800 leading-tight">Pizza Grande + 3 Ingredientes</h4>
+                                <span class="text-lg font-black text-blue-700">RD$780</span>
+                            </div>
+                            <p class="text-sm text-slate-500">Grande con tres ingredientes seleccionados y mucho sabor.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 text-center py-8">
+        <p class="text-sm">© 2026 Club Náutico Las Calderas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const toggles = [
+            { buttonId: 'toggleBrunch', sectionId: 'brunchSection', labelHidden: 'Mostrar brunch', labelShown: 'Ocultar brunch', textClass: 'brunch-text' },
+            { buttonId: 'toggleEntradas', sectionId: 'entradasSection', labelHidden: 'Mostrar entradas', labelShown: 'Ocultar entradas', textClass: 'entradas-text' },
+            { buttonId: 'toggleEnsaladas', sectionId: 'ensaladasSection', labelHidden: 'Mostrar ensaladas', labelShown: 'Ocultar ensaladas', textClass: 'ensaladas-text' },
+            { buttonId: 'togglePastas', sectionId: 'pastasSection', labelHidden: 'Mostrar pastas', labelShown: 'Ocultar pastas', textClass: 'pastas-text' },
+            { buttonId: 'togglePescados', sectionId: 'pescadosSection', labelHidden: 'Mostrar pescados', labelShown: 'Ocultar pescados', textClass: 'pescados-text' },
+            { buttonId: 'toggleCarnes', sectionId: 'carnesSection', labelHidden: 'Mostrar carnes', labelShown: 'Ocultar carnes', textClass: 'carnes-text' },
+            { buttonId: 'toggleAves', sectionId: 'avesSection', labelHidden: 'Mostrar aves', labelShown: 'Ocultar aves', textClass: 'aves-text' },
+            { buttonId: 'toggleGuarniciones', sectionId: 'guarnicionesSection', labelHidden: 'Mostrar guarniciones', labelShown: 'Ocultar guarniciones', textClass: 'guarniciones-text' },
+            { buttonId: 'togglePostres', sectionId: 'postresSection', labelHidden: 'Mostrar postres', labelShown: 'Ocultar postres', textClass: 'postres-text' },
+            { buttonId: 'togglePizzas', sectionId: 'pizzasSection', labelHidden: 'Mostrar pizzas', labelShown: 'Ocultar pizzas', textClass: 'pizzas-text' },
+            { buttonId: 'toggleJugos', sectionId: 'jugosSection', labelHidden: 'Mostrar jugos', labelShown: 'Ocultar jugos', textClass: 'jugos-text' },
+            { buttonId: 'toggleDigestivos', sectionId: 'digestivosSection', labelHidden: 'Mostrar digestivos', labelShown: 'Ocultar digestivos', textClass: 'digestivos-text' },
+            { buttonId: 'toggleTragos', sectionId: 'tragosSection', labelHidden: 'Mostrar tragos', labelShown: 'Ocultar tragos', textClass: 'tragos-text' },
+            { buttonId: 'toggleVodka', sectionId: 'vodkaSection', labelHidden: 'Mostrar vodka', labelShown: 'Ocultar vodka', textClass: 'vodka-text' },
+            { buttonId: 'toggleWhiskyVodka', sectionId: 'whiskyVodkaSection', labelHidden: 'Mostrar whisky y vodka', labelShown: 'Ocultar whisky y vodka', textClass: 'whiskyvodka-text' },
+            { buttonId: 'toggleRon', sectionId: 'ronSection', labelHidden: 'Mostrar ron', labelShown: 'Ocultar ron', textClass: 'ron-text' },
+            { buttonId: 'toggleCervezas', sectionId: 'cervezasSection', labelHidden: 'Mostrar cervezas', labelShown: 'Ocultar cervezas', textClass: 'cervezas-text' },
+            { buttonId: 'toggleAperitivos', sectionId: 'aperitivosSection', labelHidden: 'Mostrar aperitivos', labelShown: 'Ocultar aperitivos', textClass: 'aperitivos-text' },
+            { buttonId: 'toggleVinos', sectionId: 'vinosSection', labelHidden: 'Mostrar vinos', labelShown: 'Ocultar vinos', textClass: 'vinos-text' },
+            { buttonId: 'toggleOtro', sectionId: 'otroSection', labelHidden: 'Mostrar otro', labelShown: 'Ocultar otro', textClass: 'otro-text' },
+        ];
+
+        toggles.forEach(({ buttonId, sectionId, labelHidden, labelShown, textClass }) => {
+            const button = document.getElementById(buttonId);
+            const section = document.getElementById(sectionId);
+            if (!button || !section) return;
+
+            button.addEventListener('click', () => {
+                const hidden = section.classList.toggle('hidden');
+                button.setAttribute('aria-expanded', String(!hidden));
+                button.querySelector(`.${textClass}`).textContent = hidden ? labelHidden : labelShown;
+            });
+        });
+
+        const drinksPage = document.getElementById('drinksPage');
+        const foodsPage = document.getElementById('foodsPage');
+        const showDrinksBtn = document.getElementById('showDrinksBtn');
+        const showFoodsBtn = document.getElementById('showFoodsBtn');
+
+        if (showDrinksBtn && showFoodsBtn && drinksPage && foodsPage) {
+            showDrinksBtn.addEventListener('click', () => {
+                foodsPage.classList.add('hidden');
+                drinksPage.classList.remove('hidden');
+            });
+
+            showFoodsBtn.addEventListener('click', () => {
+                drinksPage.classList.add('hidden');
+                foodsPage.classList.remove('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
