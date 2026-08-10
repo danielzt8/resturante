@@ -6,6 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú - Club Náutico Las Calderas</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+  @media print {
+    /* Muestra todas las secciones (ignora el 'hidden' de Tailwind) */
+    #alimentos, #bebidas { 
+      display: block !important; 
+      page-break-inside: avoid;
+    }
+    
+    /* Oculta los botones de cambiar entre alimentos y bebidas */
+    #botones-navegacion { 
+      display: none !important; 
+    }
+
+    /* Ajustes generales para el papel */
+    body { 
+      background-color: white !important; 
+      color: black !important;
+    }
+    
+    /* Evita que los contenedores se corten a la mitad de la página */
+    .bg-white {
+      box-shadow: none !important;
+      border: 1px solid #e5e7eb !important;
+      break-inside: avoid;
+    }
+  }
+</style>
 </head>
 
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
@@ -1148,7 +1175,7 @@
                         <article
                             class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
                             <div class="h-56 bg-slate-200 overflow-hidden relative">
-                                <img src="https://via.placeholder.com/600x400?text=Paella+de+carnes"
+                                <img src="images/Paella de carne.png"
                                     alt="Paella de Carnes"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <span
@@ -1166,7 +1193,7 @@
                         <article
                             class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
                             <div class="h-56 bg-slate-200 overflow-hidden relative">
-                                <img src="https://via.placeholder.com/600x400?text=Cazuela+de+mariscos"
+                                <img src="/images/cazuela caliente.png"
                                     alt="Cazuela de Mariscos"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <span
@@ -1184,7 +1211,7 @@
                         <article
                             class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
                             <div class="h-56 bg-slate-200 overflow-hidden relative">
-                                <img src="https://via.placeholder.com/600x400?text=Salpicón+de+mariscos"
+                                <img src="images/plato de camarones.png"
                                     alt="Salpicón de Mariscos"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <span
@@ -1202,7 +1229,7 @@
                         <article
                             class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
                             <div class="h-56 bg-slate-200 overflow-hidden relative">
-                                <img src="https://via.placeholder.com/600x400?text=Filete+de+salmón"
+                                <img src="images/filete de salmon.png"
                                     alt="Filete de salmón"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <span
@@ -1219,7 +1246,7 @@
                         <article
                             class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
                             <div class="h-56 bg-slate-200 overflow-hidden relative">
-                                <img src="https://via.placeholder.com/600x400?text=Olas+de+mar+y+tierra"
+                                <img src="/images/filete de res.png"
                                     alt="Olas de Mar y Tierra"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <span
@@ -1237,7 +1264,7 @@
                         <article
                             class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
                             <div class="h-56 bg-slate-200 overflow-hidden relative">
-                                <img src="https://via.placeholder.com/600x400?text=Mero+Cartocio" alt="Mero Cartocio"
+                                <img src="images/mero con camarones.png" alt="Mero Cartocio"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <span
                                     class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-slate-900">Pescado</span>
@@ -1254,7 +1281,7 @@
                         <article
                             class="bg-slate-50 rounded-3xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
                             <div class="h-56 bg-slate-200 overflow-hidden relative">
-                                <img src="https://via.placeholder.com/600x400?text=Chillo+por+libra"
+                                <img src="images/chillo frita.png"
                                     alt="Chillo precio por libra"
                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <span
@@ -2157,6 +2184,11 @@
             });
         }
     </script>
+
+<button onclick="window.print()" class="fixed bottom-5 right-5 bg-blue-800 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 print:hidden z-50 flex items-center gap-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
+  Imprimir / PDF
+</button>
 </body>
 
 </html>
